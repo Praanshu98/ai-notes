@@ -1,8 +1,18 @@
+import CardArea from "../components/CardArea";
+import NavBar from "../components/NavBar";
+import NoteCreate from "../components/NoteCreate";
+import SearchBar from "../components/SearchBar";
+
 const Dashboard = () => {
   return (
-    <>
-      <h1 className="font-bold text-xl"> Dashboard Page </h1>
-    </>
+    <div className="flex h-screen w-screen p-6">
+      <NavBar />
+      <div>
+        <SearchBar />
+        <CardArea />
+        <NoteCreate />
+      </div>
+    </div>
   );
 };
 
