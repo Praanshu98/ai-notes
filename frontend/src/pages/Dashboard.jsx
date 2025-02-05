@@ -5,9 +5,9 @@ import SearchBar from "../components/SearchBar";
 
 const Dashboard = () => {
   return (
-    <div className="flex h-screen w-screen p-6">
+    <div className="flex p-3 gap-6 h-screen">
       <NavBar />
-      <div>
+      <div className="flex flex-col flex-1">
         <SearchBar />
         <CardArea />
         <NoteCreate />
