@@ -1,8 +1,8 @@
 export default function NavBar() {
   return (
-    <div className="min-w-40 w-1/5 max-w-52 border border-gray-200 rounded-3xl flex flex-col px-3 ">
-      {/* Home */}
-      <div className="p-3 flex gap-3 items-center">
+    <div className="min-w-52 w-1/5 p-3 max-w-56 border border-gray-200 rounded-3xl flex flex-col h-full overflow-hidden">
+      {/* Logo */}
+      <div className="flex gap-3 items-center pb-3">
         <img
           src="../../assets/images/png/notes.png"
           alt="AI Notes Logo"
@@ -11,11 +11,14 @@ export default function NavBar() {
         <p>AI Notes</p>
       </div>
 
+      {/* Divider */}
       <div className="border-gray-200 border"></div>
 
-      <div className="flex flex-col justify-between h-screen">
-        <div>
-          <div className="flex gap-2 items-center pt-3">
+      {/* Main section */}
+      <div className="flex flex-col justify-between pt-3 flex-1">
+        {/* Home/Favourites section expands to fill available space */}
+        <div className="flex flex-col flex-1">
+          <div className="flex gap-2 items-center">
             <img
               src="../../assets/images/svg/home_default.svg"
               alt="Home"
@@ -23,7 +26,6 @@ export default function NavBar() {
             />
             <p>Home</p>
           </div>
-
           <div className="flex gap-2 items-center pt-3">
             <img
               src="../../assets/images/png/fav_default.png"
@@ -34,7 +36,8 @@ export default function NavBar() {
           </div>
         </div>
 
-        <div className="pb-3 flex justify-around">
+        {/* Profile section stays at the bottom */}
+        <div className="flex justify-around">
           <div className="rounded-full text-white bg-black w-6 h-6 flex justify-center">
             P
           </div>
