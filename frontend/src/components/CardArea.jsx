@@ -1,3 +1,14 @@
+import NoteCard from "./NoteCard";
+
 export default function CardArea() {
-  return <h1> Card Area </h1>;
+  return (
+    <div className="p-3 gap-3 flex flex-wrap">
+      <NoteCard />
+      <NoteCard />
+      <NoteCard />
+      <NoteCard />
+      <NoteCard />
+      <NoteCard />
+    </div>
+  );
 }
