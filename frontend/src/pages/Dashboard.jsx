@@ -9,7 +9,10 @@ const Dashboard = () => {
       <NavBar />
       <div className="flex flex-col flex-1">
         <SearchBar />
-        <CardArea />
+
+        <div className="flex-1 overflow-auto">
+          <CardArea />
+        </div>
         <NoteCreate />
       </div>
     </div>
