@@ -22,6 +22,12 @@ const createUser = async (req, res) => {
       return res.status(400).json({ message: "Missing required fields" });
     }
 
+    let userExists = await User.findOne({ email: user.email });
+
+    if (userExists) {
+      return res.status(400).json({ message: "User already exists" });
+    }
+
     if (user.password.length < 6) {
       return res
         .status(400)
